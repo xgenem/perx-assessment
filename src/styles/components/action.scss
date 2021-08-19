@@ -1,0 +1,8 @@
+.action {
+  &-container {
+    background: $backgroundSecondary;
+    border: $border;
+    padding: ($padding / 2);
+    margin-right: ($padding / 2);
+  }
+}

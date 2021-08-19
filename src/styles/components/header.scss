@@ -1,0 +1,8 @@
+.header {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: ($padding * 2) ($padding * 2);
+}

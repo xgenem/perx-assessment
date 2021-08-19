@@ -1,0 +1,24 @@
+.search {
+  &-container {
+    min-width: 240px;
+    height: 20px;
+  }
+
+  &-input {
+    font-size: $searchFontSize;
+    background-color: $backgroundSecondary;
+    border: 0;
+    outline: 0;
+    color: $textColor;
+    margin-left: 5px;
+
+    &:focus-visible {
+      outline: 0;
+    }
+  }
+}
+
+.search-button {
+  height: $padding * 2;
+  width: 50px;
+}
