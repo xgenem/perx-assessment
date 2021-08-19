@@ -3,7 +3,7 @@ import React from "react";
 import defaultAvatar from "../../assets/images/avatar.png";
 
 export default function ResultItem({ item }) {
-  const avatar = item.avatar ? item.avatar : defaultAvatar;
+  const avatar = item.avatar_url ? item.avatar_url : defaultAvatar;
   return (
     <section className="result">
       <div className="result-content">
@@ -11,11 +11,11 @@ export default function ResultItem({ item }) {
           src={avatar}
           className="avatar"
           style={{ marginRight: 10 }}
-          alt={`${item.name}'s avatar`}
+          alt={`${item.login}'s avatar`}
         />
 
         <a href="/#" className="text-link">
-          {item.name}
+          {item.login}
         </a>
       </div>
     </section>

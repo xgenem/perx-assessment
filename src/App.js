@@ -1,5 +1,5 @@
 // import logo from "./logo.svg";
-import Lull from "./Components/App";
+import Lull from "./components/App";
 import "./styles/index.scss";
 
 export default function App() {

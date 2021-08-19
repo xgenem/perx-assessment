@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../Logo";
 
-export default function Header({ title, subtitle, onSearch }) {
+export default function Header({ title, subtitle, onSearch, onTextChange }) {
   return (
     <div className="header">
       <section>
@@ -14,6 +14,7 @@ export default function Header({ title, subtitle, onSearch }) {
               className="search-input"
               title="Search"
               placeholder="Github username"
+              onChange={onTextChange}
             />
           </div>
           <button className="search-button" onSubmit={onSearch}>
