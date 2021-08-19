@@ -1,0 +1,17 @@
+.result {
+  border: $border;
+  margin: $padding ($padding * 2);
+  align-items: center;
+
+  &-content {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    padding: $padding;
+    align-items: center;
+  }
+
+  a {
+    font-weight: 700;
+  }
+}

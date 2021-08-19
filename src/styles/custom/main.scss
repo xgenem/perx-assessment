@@ -1,5 +1,5 @@
 body {
-  background: $background;
+  background: #fff;
   font: 400 13px "CoreSans", Arial, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -25,14 +25,15 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: $hyperlinkHover;
+    color: $textLink;
+    text-decoration: underline;
   }
 
   &:active {
-    color: $hyperlinkActive;
+    color: $textLinkActive;
   }
 
   &:visited {
-    color: $hyperlinkVisited;
+    color: $textLinkVisited;
   }
 }
