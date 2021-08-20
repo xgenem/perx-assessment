@@ -14,7 +14,7 @@ export default function ResultItem({ item }) {
           alt={`${item.login}'s avatar`}
         />
 
-        <a href="/#" className="text-link">
+        <a href={`user/${item.login}`} className="text-link">
           {item.login}
         </a>
       </div>

@@ -1,8 +1,10 @@
 import React, { useState, useCallback } from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import debounce from "lodash.debounce";
 import { searchUser } from "../../api/search";
 import Header from "../Header";
 import Results from "../Results";
+import User from "../User";
 
 export default function App() {
   const [results, setResults] = useState([]);
@@ -22,13 +24,22 @@ export default function App() {
 
   return (
     <>
-      <Header
-        title="Findhub"
-        subtitle="find someone on Github"
-        onTextChange={onTextChange}
-      />
       <div>
-        <Results results={results?.items || []} />
+        <BrowserRouter>
+          <Switch>
+            <Route path="/user">
+              <User />
+            </Route>
+            <Route path="/">
+              <Header
+                title="Findhub"
+                subtitle="find someone on Github"
+                onTextChange={onTextChange}
+              />
+              <Results results={results?.items || []} />
+            </Route>
+          </Switch>
+        </BrowserRouter>
       </div>
     </>
   );
