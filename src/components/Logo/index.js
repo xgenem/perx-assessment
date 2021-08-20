@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Logo() {
   return (
-    <a href="javascript(void);" className="logo">
+    <a href="/" className="logo">
       <svg
         height="32"
         aria-hidden="true"

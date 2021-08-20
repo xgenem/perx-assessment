@@ -27,7 +27,7 @@ export default function App() {
       <div>
         <BrowserRouter>
           <Switch>
-            <Route path="/user">
+            <Route path="/user/:username">
               <User />
             </Route>
             <Route path="/">

@@ -1,0 +1,11 @@
+.repo {
+  &-section {
+    h3 {
+      color: $darkTextColor;
+      text-transform: uppercase;
+    }
+    a {
+      color: $textLink;
+    }
+  }
+}

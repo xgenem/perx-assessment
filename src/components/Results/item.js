@@ -1,8 +1,12 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { getUserInfo } from "../../api";
 
 import defaultAvatar from "../../assets/images/avatar.png";
 
 export default function ResultItem({ item }) {
+  const dispatch = useDispatch();
   const avatar = item.avatar_url ? item.avatar_url : defaultAvatar;
   return (
     <section className="result">
@@ -14,9 +18,18 @@ export default function ResultItem({ item }) {
           alt={`${item.login}'s avatar`}
         />
 
-        <a href={`user/${item.login}`} className="text-link">
+        <Link
+          to={`user/${item.login}`}
+          className="text-link"
+          onClick={() => {
+            getUserInfo(item.login).then((_user) => {
+              console.log("user ", _user);
+              dispatch({ type: "SELECT_USER", payload: _user });
+            });
+          }}
+        >
           {item.login}
-        </a>
+        </Link>
       </div>
     </section>
   );
